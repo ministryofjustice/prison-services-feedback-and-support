@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      args:
+        BUILD_NUMBER: dev
+        GIT_REF: dev
