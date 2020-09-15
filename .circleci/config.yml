@@ -44,8 +44,6 @@ workflows:
               only:
                 - main
       - hmpps/deploy_env:
-          chart_name: prison-services-feedback-and-support
-          release_name: prison-services-feedback-and-support
           name: deploy_dev
           env: "dev"
           requires:
