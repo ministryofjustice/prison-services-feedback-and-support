@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "security_audit": "npx audit-ci --config audit-ci.json"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
