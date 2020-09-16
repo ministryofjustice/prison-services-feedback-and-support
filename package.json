@@ -7,18 +7,28 @@
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=prison-services-feedback-and-support:* npm run devstart",
     "security_audit": "npx audit-ci --config audit-ci.json",
-    "record-build-info": "node ./bin/record-build-info"
+    "record-build-info": "node ./bin/record-build-info",
+    "lint": "node node_modules/eslint/bin/eslint.js ./"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "govuk-frontend": "^3.8.1",
+    "http-errors": "^1.8.0",
+    "mkdirp": "^1.0.4",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
     "nunjucks": "^3.2.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
   }
 }
