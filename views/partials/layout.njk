@@ -1,7 +1,17 @@
 {% extends "govuk/template.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {% block head %}
   <link href="/stylesheets/styles.css" rel="stylesheet">
+{% endblock %}
+
+{% block beforeContent %}
+  {% if backLinkUrl %}
+    {{ govukBackLink({
+      text: "Back",
+      href: backLinkUrl
+    }) }}
+  {% endif %}
 {% endblock %}
 
 {% block content %}
