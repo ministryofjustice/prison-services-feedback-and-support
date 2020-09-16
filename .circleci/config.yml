@@ -23,6 +23,9 @@ jobs:
           key: node_modules-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run:
+          name: Run eslint
+          command: npm run lint
       - persist_to_workspace:
           root: .
           paths:
