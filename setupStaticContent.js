@@ -1,19 +1,16 @@
-const express = require("express");
-const path = require("path");
+const express = require('express')
+const path = require('path')
 
-const router = express.Router();
+const router = express.Router()
 
 module.exports = () => {
   router.use(express.static(path.join(__dirname, 'build/static')))
 
-  const assetPaths = [
-    "./node_modules/govuk-frontend/govuk/assets",
-    "./node_modules/govuk-frontend",
-  ];
+  const assetPaths = ['./node_modules/govuk-frontend/govuk/assets', './node_modules/govuk-frontend']
 
   assetPaths.forEach((dir) => {
-    router.use("/assets", express.static(path.join(__dirname, dir)));
-  });
+    router.use('/assets', express.static(path.join(__dirname, dir)))
+  })
 
-  return router;
-};
+  return router
+}

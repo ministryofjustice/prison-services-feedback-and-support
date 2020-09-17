@@ -1,0 +1,76 @@
+{% extends "./partials/layout.njk" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">HMPPS Digital Services</h1>
+  <p>Get help with signing in to HMPPS Digital Services and other problems you might have.</p>
+
+  <h2 class="govuk-heading-m">Problems with signing in</h2>
+  <p>You should check your password if you have a problem with signing in. Passwords are case sensitive.</p>
+  <p>
+    <a href="#">You can reset your password</a> if you cannot remember it. If you still have a problem, select the service you are trying to sign in to.
+  </p>
+
+  <h2 class="govuk-heading-m">All other problems</h2>
+  <form method="POST">
+    {{ govukRadios({
+      idPrefix: "service",
+      name: "service",
+      fieldset: {
+        legend: {
+          text: "Select the service you are having a problem with."
+        }
+      },
+      items: [
+        {
+          value: "prison-offender-manager",
+          text: "Allocate a POM"
+        },
+        {
+          value: "book-secure-move",
+          text: "Book a secure move"
+        },
+        {
+          value: "videolink",
+          text: "Book a videolink with a prison"
+        },
+        {
+          value: "check-my-diary",
+          text: "Check my diary"
+        },
+        {
+          value: "categorisation-tool",
+          text: "Digital Categorisation Service"
+        },
+        {
+          value: "digital-prison-services",
+          text: "Digital Prison Services (DPS)"
+        },
+        {
+          value: "digital-prison-services",
+          text: "NOMIS"
+        },
+        {
+          value: "hdc-licences",
+          text: "Home Detention Curfew and licences"
+        },
+        {
+          value: "pathfinder",
+          text: "Pathfinder service"
+        },
+        {
+          value: "safety-diagnostic-tool",
+          text: "Safety Diagnostic Tool"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Select service"
+    }) }}
+  </form>
+
+  <h2 class="govuk-heading-m">Let us know what you think of our services</h2>
+  <p>You can send feedback by selecting the relevant service above.</p>
+{% endblock %}
