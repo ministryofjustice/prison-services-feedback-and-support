@@ -16,7 +16,7 @@
     "express": "~4.16.1",
     "govuk-frontend": "^3.8.1",
     "http-errors": "^1.8.0",
-    "mkdirp": "^1.0.4",
+    "mkdirp": "^0.5.5",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
     "nunjucks": "^3.2.2"
