@@ -10,8 +10,6 @@ router.post('/', feedbackAndSupportController.selectServicePost)
 
 router.get('/videolink', (req, res) => res.render('services/videolink', { backLinkUrl }))
 
-router.get('/videolink', (req, res) => res.render('services/prison-offender-manager', { backLinkUrl }))
-
 router.get('/book-secure-move', (req, res) => res.render('services/bookSecureMove', { backLinkUrl }))
 
 router.get('/prison-offender-manager', (req, res) => res.render('services/prisonOffenderManager', { backLinkUrl }))
