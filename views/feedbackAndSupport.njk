@@ -1,8 +1,16 @@
 {% extends "./partials/layout.njk" %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 
 {% block content %}
+  {% if errors %}
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: errors
+    }) }}
+
+  {% endif %}
   <h1 class="govuk-heading-l">HMPPS Digital Services</h1>
   <p>Get help with signing in to HMPPS Digital Services and other problems you might have.</p>
 
@@ -17,6 +25,7 @@
     {{ govukRadios({
       idPrefix: "service",
       name: "service",
+      errorMessage: errors | findError('service'),
       fieldset: {
         legend: {
           text: "Select the service you are having a problem with."

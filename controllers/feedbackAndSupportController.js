@@ -1,4 +1,16 @@
-exports.selectServicePost = (req, res) => {
+exports.selectServicePost = async (req, res) => {
   const { service } = req.body
-  res.redirect(`/feedback-and-support/${service}`)
+
+  if (!service) {
+    res.render('feedbackAndSupport', {
+      errors: [
+        {
+          text: 'Select a service',
+          href: '#service',
+        },
+      ],
+    })
+  } else {
+    res.redirect(`/feedback-and-support/${service}`)
+  }
 }
