@@ -5,7 +5,6 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
-const config = require('./config')
 const setupStaticContent = require('./setupStaticContent')
 const setupSass = require('./setupSass')
 const nunjucksSetup = require('./setupNunjucks')
@@ -23,11 +22,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(setupStaticContent())
 app.use(setupSass())
-
-app.use((req, res, next) => {
-  res.locals.oauthUrl = config.urls.oauth
-  next()
-})
 
 app.use('/', indexRouter)
 app.use('/feedback-and-support', feedbackAndSupportRouter)
