@@ -25,6 +25,9 @@ env:
   - name: OAUTH_ENDPOINT_URL
     value: {{ .Values.env.OAUTH_ENDPOINT_URL | quote }}
 
+  - name: ALLOCATION_MANAGER_ENDPOINT_URL
+    value: {{ .Values.env.ALLOCATION_MANAGER_ENDPOINT_URL | quote }}
+
   - name: NODE_ENV
     value: production
       

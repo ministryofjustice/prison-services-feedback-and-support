@@ -20,3 +20,4 @@ env:
   NN_ENDPOINT_URL: https://digital-dev.prison.service.justice.gov.uk/
   PRISON_STAFF_HUB_UI_URL: "https://whereabouts-dev.prison.service.justice.gov.uk/"
   OAUTH_ENDPOINT_URL: https://sign-in-dev.hmpps.service.justice.gov.uk/auth/
+  ALLOCATION_MANAGER_ENDPOINT_URL: https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/
