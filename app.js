@@ -2,19 +2,16 @@ const createError = require('http-errors')
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
-const nunjucks = require('nunjucks')
 
 const setupStaticContent = require('./setupStaticContent')
 const setupSass = require('./setupSass')
+const nunjucksSetup = require('./setupNunjucks')
 const indexRouter = require('./routes/indexRouter')
 const feedbackAndSupportRouter = require('./routes/feedbackAndSupportRouter')
 
 const app = express()
 
-nunjucks.configure(['node_modules/govuk-frontend/', 'views'], {
-  autoescape: true,
-  express: app,
-})
+nunjucksSetup(app)
 
 app.set('view engine', 'njk')
 app.use(logger('dev'))

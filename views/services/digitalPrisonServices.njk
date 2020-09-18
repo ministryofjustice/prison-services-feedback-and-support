@@ -1,24 +1,40 @@
 {% extends "../partials/layout.njk" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block content %}
   <h1 class="govuk-heading-l">Digital Prison Service</h1>
   <p>Digital Prison Services is the replacement for NOMIS and includes Whereabouts.</p>
 
-  <h2 class="govuk-heading-m">Problems with viewing parts of the service or certain details</h2>
-  <p>This is usually because you do not have the required role on your profile. If you have problems with accessing a part of the service, contact your Local System Administrator (LSA). If you still have problems after speaking to your LSA, you should contact the helpdesk by ringing 020 3788 4636, or #6598 from inside a prison.</p>
+  {{ govukDetails({
+    summaryText: "Problems with viewing parts of the service or certain details",
+    text: "This is usually because you do not have the required role on your profile. If you have problems with accessing a part of the service, contact your Local System Administrator (LSA). If you still have problems after speaking to your LSA, you should contact the helpdesk by ringing 020 3788 4636, or #6598 from inside a prison."
+  }) }}
 
-  <h2 class="govuk-heading-m">Being asked to sign in twice</h2>
-  <p>This is because an old URL is being used to access the service. You might be using an old bookmark. You should only use the DPS icon on your desktop to access the service.</p>
+  {{ govukDetails({
+    summaryText: "Being asked to sign in twice",
+    text: "This is because an old URL is being used to access the service. You might be using an old bookmark. You should only use the DPS icon on your desktop to access the service."
+  }) }}
 
-  <h2 class="govuk-heading-m">Changing the prison you are able to view in DPS</h2>
-  <p>You can change the prison you are viewing by clicking on your name at the top of the screen and then selecting ‘Change caseload’.</p>
+  {{ govukDetails({
+    summaryText: "Changing the prison you are able to view in DPS",
+    text: "You can change the prison you are viewing by clicking on your name at the top of the screen and then selecting ‘Change caseload’."
+  }) }}
 
-  <h2 class="govuk-heading-m">Problems with NOMIS</h2>
-  <p>If you have a problem with NOMIS, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison.</p>
+  {{ govukDetails({
+    summaryText: "Problems with NOMIS",
+    text: "If you have a problem with NOMIS, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison."
+  }) }}
+
+  {{ govukDetails({
+    summaryText: "Problems with NOMIS",
+    text: "If you have a problem with NOMIS, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison."
+  }) }}
   
   <h2 class="govuk-heading-m">Any other problems with DPS</h2>
   <p>If your problem has not been solved, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison.</p>
 
-  <h2 class="govuk-heading-m">Sending feedback</h2>
-  <p>Contact <a href="mailto:feedback@digital.justice.gov.uk">feedback@digital.justice.gov.uk</a> to give us any feedback about DPS. You should not contact this email address if you are having any problems with the service.</p>
+  {{ govukDetails({
+    summaryText: "Sending feedback",
+    html: "<p>Contact <a href='mailto:feedback@digital.justice.gov.uk'>feedback@digital.justice.gov.uk</a> to give us any feedback about DPS. You should not contact this email address if you are having any problems with the service.</p>"
+  }) }} 
 {% endblock %}

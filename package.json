@@ -8,9 +8,11 @@
     "serverstart": "DEBUG=prison-services-feedback-and-support:* npm run devstart",
     "security_audit": "npx audit-ci --config audit-ci.json",
     "record-build-info": "node ./bin/record-build-info",
-    "lint": "node node_modules/eslint/bin/eslint.js ./"
+    "lint": "node node_modules/eslint/bin/eslint.js ./",
+    "test": "jest"
   },
   "dependencies": {
+    "@ministryofjustice/frontend": "0.0.19-alpha",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -30,13 +32,14 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm test"
     }
   },
   "lint-staged": {
