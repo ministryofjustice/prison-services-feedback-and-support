@@ -26,6 +26,9 @@ jobs:
       - run:
           name: Run eslint
           command: npm run lint
+      - run:
+          name: Run Tests
+          command: npm run test
       - persist_to_workspace:
           root: .
           paths:
