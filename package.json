@@ -11,6 +11,7 @@
     "lint": "node node_modules/eslint/bin/eslint.js ./"
   },
   "dependencies": {
+    "@ministryofjustice/frontend": "0.0.19-alpha",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",

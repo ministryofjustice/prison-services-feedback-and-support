@@ -1,8 +1,22 @@
 {% extends "govuk/template.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{%- from "moj/components/header/macro.njk" import mojHeader -%}
 
 {% block head %}
   <link href="/stylesheets/styles.css" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+  {{ mojHeader({
+    organisationLabel: {
+      text: 'HMPPS',
+      href: '/'
+    },
+    serviceLabel: {
+      text: 'Digital Prison Services',
+      href: '/'
+    }
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}
