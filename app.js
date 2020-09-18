@@ -24,11 +24,6 @@ app.use(cookieParser())
 app.use(setupStaticContent())
 app.use(setupSass())
 
-app.use((req, res, next) => {
-  res.locals.oauthUrl = config.urls.oauth
-  next()
-})
-
 app.use('/', indexRouter)
 app.use('/feedback-and-support', feedbackAndSupportRouter)
 

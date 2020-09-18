@@ -1,4 +1,5 @@
 const nunjucks = require('nunjucks')
+const config = require('./config')
 
 module.exports = (app) => {
   const njkEnv = nunjucks.configure(
@@ -19,6 +20,9 @@ module.exports = (app) => {
     }
     return null
   })
+
+  njkEnv.addGlobal('oauthUrl', config.urls.oauth)
+  njkEnv.addGlobal('googleAnalyticsId', config.app.googleAnalyticsId)
 
   return njkEnv
 }
