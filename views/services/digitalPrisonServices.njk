@@ -1,8 +1,10 @@
 {% extends "../partials/layout.njk" %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
+{% set title = "Digital Prison Service" %}
+
 {% block content %}
-  <h1 class="govuk-heading-l">Digital Prison Service</h1>
+  <h1 class="govuk-heading-l">{{title}}</h1>
   <p>Digital Prison Services is the replacement for NOMIS and includes Whereabouts.</p>
 
   {{ govukDetails({

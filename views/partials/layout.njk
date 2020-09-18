@@ -6,6 +6,9 @@
   <link href="/stylesheets/styles.css" rel="stylesheet">
 {% endblock %}
 
+{% set titlePrefix = title + ' - ' if title%}
+{% block pageTitle %}{% if errors %}Error: {% endif %}{{titlePrefix}}Feedback and Support - HMPPS Digital Services{% endblock %}
+
 {% block header %}
   {{ mojHeader({
     organisationLabel: {
