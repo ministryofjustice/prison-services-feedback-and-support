@@ -5,7 +5,6 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
-const config = require('./config')
 const setupStaticContent = require('./setupStaticContent')
 const setupSass = require('./setupSass')
 const nunjucksSetup = require('./setupNunjucks')
