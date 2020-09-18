@@ -1,4 +1,5 @@
 const express = require('express')
+const config = require('../config')
 
 const feedbackAndSupportController = require('../controllers/feedbackAndSupportController')
 
@@ -12,7 +13,9 @@ router.get('/videolink', (req, res) => res.render('services/videolink', { backLi
 
 router.get('/book-secure-move', (req, res) => res.render('services/bookSecureMove', { backLinkUrl }))
 
-router.get('/prison-offender-manager', (req, res) => res.render('services/prisonOffenderManager', { backLinkUrl }))
+router.get('/prison-offender-manager', (req, res) =>
+  res.render('services/prisonOffenderManager', { allocationManagerUrl: config.urls.allocationManager, backLinkUrl })
+)
 
 router.get('/check-my-diary', (req, res) => res.render('services/checkMyDiary', { backLinkUrl }))
 

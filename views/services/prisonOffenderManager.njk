@@ -1,9 +1,11 @@
 {% extends "../partials/layout.njk" %}
 
+{% set title = "Allocate a POM" %}
+
 {% block content %}
-  <h1 class="govuk-heading-l">Allocate a POM</h1>
+  <h1 class="govuk-heading-l">{{ title }}</h1>
   
   <p>This service allocates Prisoner Offender Managers.</p>
 
-  <p>Contact us <a href="#">Using the online form</a></p>
+  <p>Contact us <a href="{{ allocationManagerUrl }}">Using the online form</a></p>
 {% endblock %}

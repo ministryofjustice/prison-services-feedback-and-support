@@ -1,6 +1,8 @@
 {% extends "../partials/layout.njk" %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
+{% set title = "Home Detention Curfew and licences" %}
+
 {% set summaryHtml %}
   <p>If you need to make a change to your own role, or that of someone else, to access different parts of this service, you should contact <a href="mailto:hdcdigitalservice@digital.justice.gov.uk">hdcdigitalservice@digital.justice.gov.uk.</p>
 
@@ -8,7 +10,7 @@
 {% endset %}
 
 {% block content %}
-  <h1 class="govuk-heading-l">Home Detention Curfew and licences</h1>
+  <h1 class="govuk-heading-l">{{title}}</h1>
 
   <p>This service creates and approves Home Detention Curfews and licences for prisoners.</p>
 

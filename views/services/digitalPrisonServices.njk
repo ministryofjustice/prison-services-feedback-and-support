@@ -1,8 +1,10 @@
 {% extends "../partials/layout.njk" %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
+{% set title = "Digital Prison Service" %}
+
 {% block content %}
-  <h1 class="govuk-heading-l">Digital Prison Service</h1>
+  <h1 class="govuk-heading-l">{{title}}</h1>
   <p>Digital Prison Services is the replacement for NOMIS and includes Whereabouts.</p>
 
   {{ govukDetails({
@@ -18,11 +20,6 @@
   {{ govukDetails({
     summaryText: "Changing the prison you are able to view in DPS",
     text: "You can change the prison you are viewing by clicking on your name at the top of the screen and then selecting ‘Change caseload’."
-  }) }}
-
-  {{ govukDetails({
-    summaryText: "Problems with NOMIS",
-    text: "If you have a problem with NOMIS, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison."
   }) }}
 
   {{ govukDetails({
