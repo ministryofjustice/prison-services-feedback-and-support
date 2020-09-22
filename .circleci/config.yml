@@ -57,6 +57,28 @@ workflows:
           filters:
             branches:
               only: main
+      - request-preprod-approval:
+          type: approval
+          requires:
+            - deploy_dev
+      - hmpps/deploy_env:
+          name: deploy_preprod
+          env: "preprod"
+          context: prison-services-feedback-and-support-preprod
+          requires:
+            - request-preprod-approval
+      - request-prod-approval:
+          type: approval
+          requires:
+            - deploy_preprod
+      - hmpps/deploy_env:
+          name: deploy_prod
+          env: "prod"
+          slack_notification: true
+          context: prison-services-feedback-and-support-prod
+          requires:
+            - request-prod-approval
+
 
   scheduled:
     triggers:
