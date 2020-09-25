@@ -11,7 +11,7 @@ image:
 
 ingress:
   enabled: true
-  enable_whitelist: true
+  enable_whitelist: false
   host: support.hmpps.service.justice.gov.uk
   cert_secret: prison-services-feedback-and-support-cert
   path: /
