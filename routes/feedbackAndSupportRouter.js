@@ -9,6 +9,8 @@ const backLinkUrl = '/'
 router.get('/', (req, res) => res.render('feedbackAndSupport'))
 router.post('/', feedbackAndSupportController.selectServicePost)
 
+router.get('/login-moved', (req, res) => res.render('support/loginMoved', { backLinkUrl }))
+
 router.get('/videolink', (req, res) => res.render('services/videolink', { backLinkUrl }))
 
 router.get('/book-secure-move', (req, res) => res.render('services/bookSecureMove', { backLinkUrl }))

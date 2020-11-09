@@ -1,0 +1,11 @@
+{% extends "../partials/layout.njk" %}
+
+{% set title = "Login page has moved" %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">{{title}}</h1>
+
+  <p>The HMPPS login page has moved.  Please click this link below to access login and HMPPS digital services from now on</p>
+
+  <p><a href="{{ oauthUrl }}">{{ oauthUrl }}</a></p>
+{% endblock %}
