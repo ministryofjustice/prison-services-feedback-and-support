@@ -1,7 +1,7 @@
 {% extends "../partials/layout.njk" %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-{% set title = "Digital Prison Service" %}
+{% set title = "Digital Prison Services" %}
 
 {% block content %}
   <h1 class="govuk-heading-l">{{title}}</h1>
@@ -38,7 +38,7 @@
     text: "If you have a problem with NOMIS, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison."
   }) }}
   
-  <h2 class="govuk-heading-m">Any other problems with DPS</h2>
+  <p><b>Any other problems with DPS</b></p>
   <p>If your problem has not been solved, you should contact the helpdesk by calling 020 3788 4636, or #6598 from inside a prison.</p>
 
   {{ govukDetails({
