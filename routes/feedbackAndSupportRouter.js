@@ -29,7 +29,9 @@ router.get('/nomis', (req, res) => res.render('services/nomis', { backLinkUrl })
 
 router.get('/hdc-licences', (req, res) => res.render('services/hdc', { backLinkUrl }))
 
-router.get('/pathfinder', (req, res) => res.render('services/pathfinder', { backLinkUrl }))
+router.get('/pathfinder', (req, res) =>
+  res.render('services/pathfinder', { pathfinderUrl: config.urls.pathfinder, backLinkUrl })
+)
 
 router.get('/safety-diagnostic-tool', (req, res) => res.render('services/safetyDiagnosticTool', { backLinkUrl }))
 

@@ -21,3 +21,4 @@ env:
   PRISON_STAFF_HUB_UI_URL: "https://whereabouts.prison.service.justice.gov.uk/"
   OAUTH_ENDPOINT_URL: https://sign-in.hmpps.service.justice.gov.uk/auth/
   ALLOCATION_MANAGER_ENDPOINT_URL: https://moic.service.justice.gov.uk/
+  PATHFINDER_URL: https://pathfinder.service.justice.gov.uk/
