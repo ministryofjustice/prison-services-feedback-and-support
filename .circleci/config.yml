@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  hmpps: ministryofjustice/hmpps@1.1.1
+  hmpps: ministryofjustice/hmpps@2.2
 
 executors:
   builder:
@@ -52,6 +52,8 @@ workflows:
       - hmpps/deploy_env:
           name: deploy_dev
           env: "dev"
+          context:
+            - hmpps-common-vars
           requires:
             - build_docker
           filters:
@@ -64,7 +66,9 @@ workflows:
       - hmpps/deploy_env:
           name: deploy_preprod
           env: "preprod"
-          context: prison-services-feedback-and-support-preprod
+          context:
+            - hmpps-common-vars
+            - prison-services-feedback-and-support-preprod
           requires:
             - request-preprod-approval
       - request-prod-approval:
@@ -74,8 +78,10 @@ workflows:
       - hmpps/deploy_env:
           name: deploy_prod
           env: "prod"
+          context:
+            - hmpps-common-vars
+            - prison-services-feedback-and-support-prod
           slack_notification: true
-          context: prison-services-feedback-and-support-prod
           requires:
             - request-prod-approval
 
