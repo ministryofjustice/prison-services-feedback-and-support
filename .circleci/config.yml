@@ -1,17 +1,13 @@
 version: 2.1
 
 orbs:
-  hmpps: ministryofjustice/hmpps@2.2
-
-executors:
-  builder:
-    docker:
-      - image: circleci/node:12-buster-browsers
-    working_directory: ~/app
+  hmpps: ministryofjustice/hmpps@2.3.0
 
 jobs:
   build:
-    executor: builder
+    executor:
+      name: hmpps/node
+      tag: 14.15.3-browsers
     steps:
       - checkout
       - restore_cache:
