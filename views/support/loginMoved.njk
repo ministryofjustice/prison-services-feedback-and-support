@@ -5,7 +5,11 @@
 {% block content %}
   <h1 class="govuk-heading-l">{{title}}</h1>
 
-  <p>The HMPPS login page has moved.  Please click this link below to access login and HMPPS digital services from now on</p>
+  <p>The HMPPS login page has moved.</p>
 
-  <p><a href="{{ oauthUrl }}">{{ oauthUrl }}</a></p>
+  <p style="color:red;font-weight:bold;">The redirect that brought you here will be disabled soon.</p>
+
+  <p style="font-weight:bold;">Please update any bookmarks you have for the old login page now.</p>
+
+  <p>This link will take you to updated login for HMPPS digital services: <a href="{{ oauthUrl }}">{{ oauthUrl }}</a></p>
 {% endblock %}
