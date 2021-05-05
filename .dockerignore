@@ -1,0 +1,13 @@
+.*
+docker-compose.yml
+gradle
+gradlew
+helm_deploy
+*.log
+node_modules
+README.md
+LICENSE
+**/*.test.js
+tests
+*.txt
+*.yaml
