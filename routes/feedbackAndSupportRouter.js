@@ -35,4 +35,6 @@ router.get('/pathfinder', (req, res) =>
 
 router.get('/safety-diagnostic-tool', (req, res) => res.render('services/safetyDiagnosticTool', { backLinkUrl }))
 
+router.get('/prepare-a-case', (req, res) => res.render('services/prepareACase', { backLinkUrl }))
+
 module.exports = router
