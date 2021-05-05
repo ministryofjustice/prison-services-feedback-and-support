@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+/* eslint-disable no-console */
+
+const fs = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 
 const { recordBuildInfoTo } = require('./build-info');
@@ -15,7 +19,7 @@ const getEnvironmentVariable = (name) => {
 
 const buildInfo = {
   buildNumber: getEnvironmentVariable('BUILD_NUMBER'),
-  gitRef: getEnvironmentVariable('GIT_REF')
+  gitRef: getEnvironmentVariable('GIT_REF'),
 };
 
 recordBuildInfoTo(target, buildInfo, (error) => {
