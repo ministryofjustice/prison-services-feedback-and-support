@@ -9,39 +9,35 @@
     "security_audit": "npx audit-ci --config audit-ci.json",
     "record-build-info": "node ./bin/record-build-info",
     "lint": "node node_modules/eslint/bin/eslint.js ./",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@ministryofjustice/frontend": "0.0.19-alpha",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "dotenv": "^8.2.0",
-    "express": "~4.16.1",
-    "govuk-frontend": "^3.8.1",
+    "@ministryofjustice/frontend": "0.2.2",
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.3.1",
+    "dotenv": "^8.5.1",
+    "express": "~4.17.1",
+    "govuk-frontend": "^3.11.0",
     "http-errors": "^1.8.0",
-    "mkdirp": "^0.5.5",
-    "morgan": "~1.9.1",
+    "mkdirp": "^1.0.4",
+    "morgan": "~1.10.0",
     "node-sass-middleware": "0.11.0",
-    "nunjucks": "^3.2.2"
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
-    "audit-ci": "^3.1.1",
+    "audit-ci": "^4.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
-    "jest": "^26.4.2",
-    "lint-staged": "^10.4.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
     "nodemon": "^2.0.7",
-    "prettier": "^2.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm test"
-    }
+    "prettier": "^2.2.1"
   },
   "lint-staged": {
     "*.{js,json,css}": [
