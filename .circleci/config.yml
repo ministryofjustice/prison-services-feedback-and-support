@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  hmpps: ministryofjustice/hmpps@3.1
+  hmpps: ministryofjustice/hmpps@3.2
 
 jobs:
   build:
@@ -94,6 +94,7 @@ workflows:
       - hmpps/npm_security_audit:
           context:
             - hmpps-common-vars
-      - hmpps/veracode_pipeline_scan:
+      - hmpps/veracode_policy_scan:
           context:
+            - veracode-credentials
             - hmpps-common-vars
