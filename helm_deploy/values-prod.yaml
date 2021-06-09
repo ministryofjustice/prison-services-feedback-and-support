@@ -21,7 +21,7 @@ env:
   PRISON_STAFF_HUB_UI_URL: "https://digital.prison.service.justice.gov.uk/"
   OAUTH_ENDPOINT_URL: https://sign-in.hmpps.service.justice.gov.uk/auth/
   ALLOCATION_MANAGER_ENDPOINT_URL: https://moic.service.justice.gov.uk/
-  PATHFINDER_URL: https://pathfinder.service.justice.gov.uk/
+  PATHFINDER_UI_URL: https://pathfinder.service.justice.gov.uk/
 
 # determine which slack channel alerts are sent to, via the correct Alert Manager receiver
 generic-prometheus-alerts:
