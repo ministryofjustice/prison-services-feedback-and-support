@@ -22,6 +22,7 @@ WORKDIR /app
 ADD --chown=appuser:appgroup . .
 
 RUN npm ci --no-audit && \
+    npm run compile-sass && \
     export BUILD_NUMBER=${BUILD_NUMBER} && \
     export GIT_REF=${GIT_REF} && \
     npm run record-build-info
