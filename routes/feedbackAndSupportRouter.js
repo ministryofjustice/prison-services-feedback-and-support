@@ -25,6 +25,8 @@ router.get('/digital-prison-services', (req, res) => res.render('services/digita
 
 router.get('/nomis', (req, res) => res.render('services/nomis', { backLinkUrl }))
 
+router.get('/manage-supervisions', (req, res) => res.render('services/manageSupervisions', { backLinkUrl }))
+
 router.get('/hdc-licences', (req, res) => res.render('services/hdc', { backLinkUrl }))
 
 router.get('/pathfinder', (req, res) =>
