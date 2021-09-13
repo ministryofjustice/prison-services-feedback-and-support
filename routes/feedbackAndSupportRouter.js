@@ -35,4 +35,6 @@ router.get('/safety-diagnostic-tool', (req, res) => res.render('services/safetyD
 
 router.get('/prepare-a-case', (req, res) => res.render('services/prepareACase', { backLinkUrl }))
 
+router.get('/workload-measurement-tool', (req, res) => res.render('services/workloadMeasurementTool', { backLinkUrl }))
+
 module.exports = router
