@@ -31,6 +31,8 @@ router.get('/pathfinder', (req, res) =>
   res.render('services/pathfinder', { pathfinderUrl: config.urls.pathfinder, backLinkUrl })
 )
 
+router.get('/soc', (req, res) => res.redirect(`${config.urls.soc}useful-links/support`))
+
 router.get('/safety-diagnostic-tool', (req, res) => res.render('services/safetyDiagnosticTool', { backLinkUrl }))
 
 router.get('/prepare-a-case', (req, res) => res.render('services/prepareACase', { backLinkUrl }))
