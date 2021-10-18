@@ -31,6 +31,9 @@ env:
   - name: PATHFINDER_UI_URL
     value: {{ .Values.env.PATHFINDER_UI_URL | quote }}
 
+  - name: SOC_UI_URL
+    value: {{ .Values.env.SOC_UI_URL | quote }}
+
   - name: NODE_ENV
     value: production
       

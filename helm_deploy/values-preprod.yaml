@@ -22,3 +22,4 @@ env:
   OAUTH_ENDPOINT_URL: https://sign-in-preprod.hmpps.service.justice.gov.uk/auth/
   ALLOCATION_MANAGER_ENDPOINT_URL: https://allocation-manager-preprod.apps.live-1.cloud-platform.service.justice.gov.uk/
   PATHFINDER_UI_URL: https://preprod.pathfinder.service.justice.gov.uk/
+  SOC_UI_URL: https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/
