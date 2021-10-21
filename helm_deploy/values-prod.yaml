@@ -1,29 +1,16 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+generic-service:
+  ingress:
+    host: support.hmpps.service.justice.gov.uk
 
-replicaCount: 2
+  env:
+    NN_ENDPOINT_URL: https://digital.prison.service.justice.gov.uk/
+    PRISON_STAFF_HUB_UI_URL: "https://digital.prison.service.justice.gov.uk/"
+    OAUTH_ENDPOINT_URL: https://sign-in.hmpps.service.justice.gov.uk/auth/
+    ALLOCATION_MANAGER_ENDPOINT_URL: https://moic.service.justice.gov.uk/
+    PATHFINDER_UI_URL: https://pathfinder.service.justice.gov.uk/
+    SOC_UI_URL: https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/
 
-image:
-  repository: quay.io/hmpps/prison-services-feedback-and-support
-  tag: latest
-  pullPolicy: IfNotPresent
-  port: 3000
-
-ingress:
-  enabled: true
-  enable_whitelist: false
-  host: support.hmpps.service.justice.gov.uk
-  cert_secret: prison-services-feedback-and-support-cert
-  path: /
-
-env:
-  NN_ENDPOINT_URL: https://digital.prison.service.justice.gov.uk/
-  PRISON_STAFF_HUB_UI_URL: "https://digital.prison.service.justice.gov.uk/"
-  OAUTH_ENDPOINT_URL: https://sign-in.hmpps.service.justice.gov.uk/auth/
-  ALLOCATION_MANAGER_ENDPOINT_URL: https://moic.service.justice.gov.uk/
-  PATHFINDER_UI_URL: https://pathfinder.service.justice.gov.uk/
-  SOC_UI_URL: https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/
-
-# determine which slack channel alerts are sent to, via the correct Alert Manager receiver
 generic-prometheus-alerts:
   alertSeverity: digital-prison-service
