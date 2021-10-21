@@ -13,6 +13,13 @@ generic-service:
     tag: app_version
     port: 3000
 
+  livenessProbe:
+    httpGet:
+      path: /ping
+  readinessProbe:
+    httpGet:
+      path: /ping
+
   ingress:
     enabled: true
     tlsSecretName: prison-services-feedback-and-support-cert
