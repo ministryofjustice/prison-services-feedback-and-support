@@ -4,9 +4,24 @@
 generic-prometheus-alerts:
   targetApplication: prison-services-feedback-and-support
 
-ingress:
-  # live-1 is blue, live is green
-  contextColour: blue
-  annotations:
-    external-dns.alpha.kubernetes.io/aws-weight: "100"
-    nginx.ingress.kubernetes.io/custom-http-errors: "418"
+generic-service:
+  replicaCount: 2
+
+  nameOverride: prison-services-feedback-and-support
+
+  image:
+    repository: quay.io/hmpps/prison-services-feedback-and-support
+    tag: app_version
+    port: 3000
+
+  ingress:
+    enabled: true
+    tlsSecretName: prison-services-feedback-and-support-cert
+
+  namespace_secrets:
+    prison-services-feedback-and-support:
+      APPINSIGHTS_INSTRUMENTATIONKEY: "APPINSIGHTS_INSTRUMENTATIONKEY"
+      GOOGLE_ANALYTICS_ID: "GOOGLE_ANALYTICS_ID"
+
+  env:
+    NODE_ENV: production

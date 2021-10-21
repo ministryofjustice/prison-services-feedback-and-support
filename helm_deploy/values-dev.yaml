@@ -1,25 +1,20 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+generic-service:
+  replicaCount: 2
 
-replicaCount: 2
+  ingress:
+    host: support-dev.hmpps.service.justice.gov.uk
 
-image:
-  repository: quay.io/hmpps/prison-services-feedback-and-support
-  tag: latest
-  pullPolicy: IfNotPresent
-  port: 3000
+  env:
+    NN_ENDPOINT_URL: https://digital-dev.prison.service.justice.gov.uk/
+    PRISON_STAFF_HUB_UI_URL: "https://digital-dev.prison.service.justice.gov.uk/"
+    OAUTH_ENDPOINT_URL: https://sign-in-dev.hmpps.service.justice.gov.uk/auth/
+    ALLOCATION_MANAGER_ENDPOINT_URL: https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/
+    PATHFINDER_UI_URL: https://dev.pathfinder.service.justice.gov.uk/
+    SOC_UI_URL: https://manage-soc-cases-dev.hmpps.service.justice.gov.uk/
 
-ingress:
-  enabled: true
-  enable_whitelist: false
-  host: support-dev.hmpps.service.justice.gov.uk
-  cert_secret: prison-services-feedback-and-support-cert
-  path: /
+  allowlist: null
 
-env:
-  NN_ENDPOINT_URL: https://digital-dev.prison.service.justice.gov.uk/
-  PRISON_STAFF_HUB_UI_URL: "https://digital-dev.prison.service.justice.gov.uk/"
-  OAUTH_ENDPOINT_URL: https://sign-in-dev.hmpps.service.justice.gov.uk/auth/
-  ALLOCATION_MANAGER_ENDPOINT_URL: https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/
-  PATHFINDER_UI_URL: https://dev.pathfinder.service.justice.gov.uk/
-  SOC_UI_URL: https://manage-soc-cases-dev.hmpps.service.justice.gov.uk/
+generic-prometheus-alerts:
+  alertSeverity: digital-prison-service-dev
