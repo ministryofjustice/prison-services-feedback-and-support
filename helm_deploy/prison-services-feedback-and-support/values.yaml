@@ -23,4 +23,4 @@ generic-service:
       GOOGLE_ANALYTICS_ID: "GOOGLE_ANALYTICS_ID"
 
   env:
-    NODE_ENV: production
+    NODE_ENV: "production"
