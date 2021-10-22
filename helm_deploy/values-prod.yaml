@@ -10,7 +10,7 @@ generic-service:
     OAUTH_ENDPOINT_URL: https://sign-in.hmpps.service.justice.gov.uk/auth/
     ALLOCATION_MANAGER_ENDPOINT_URL: https://moic.service.justice.gov.uk/
     PATHFINDER_UI_URL: https://pathfinder.service.justice.gov.uk/
-    SOC_UI_URL: https://manage-soc-cases-preprod.hmpps.service.justice.gov.uk/
+    SOC_UI_URL: https://manage-soc-cases.hmpps.service.justice.gov.uk/
 
 generic-prometheus-alerts:
   alertSeverity: digital-prison-service
