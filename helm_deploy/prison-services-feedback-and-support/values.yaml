@@ -23,6 +23,7 @@ generic-service:
   ingress:
     enabled: true
     tlsSecretName: prison-services-feedback-and-support-cert
+    contextColour: green
 
   namespace_secrets:
     prison-services-feedback-and-support:
