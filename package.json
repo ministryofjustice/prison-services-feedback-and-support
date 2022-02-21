@@ -14,6 +14,10 @@
     "compile-sass": "sass --load-path=. ./sass:./build/static/stylesheets --style compressed",
     "compile-sass-watch": "npm run compile-sass && sass --load-path=. ./sass:./build/static/stylesheets --watch --style compressed"
   },
+  "engines": {
+    "node": ">=14.*",
+    "npm": ">=7.11.0"
+  },
   "dependencies": {
     "@ministryofjustice/frontend": "^0.2.4",
     "cookie-parser": "~1.4.5",
