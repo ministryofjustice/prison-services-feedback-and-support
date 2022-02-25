@@ -39,4 +39,10 @@ router.get('/prepare-a-case', (req, res) => res.render('services/prepareACase', 
 
 router.get('/workload-measurement-tool', (req, res) => res.render('services/workloadMeasurementTool', { backLinkUrl }))
 
+router.get('/check-rule39-mail', (req, res) =>
+  res.render(`${config.urls.checkRule39Mail}scan-barcode/contact-helpdesk?pageId=dps-feedback-and-support`, {
+    backLinkUrl,
+  })
+)
+
 module.exports = router
