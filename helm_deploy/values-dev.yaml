@@ -12,6 +12,7 @@ generic-service:
     ALLOCATION_MANAGER_ENDPOINT_URL: https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/
     PATHFINDER_UI_URL: https://dev.pathfinder.service.justice.gov.uk/
     SOC_UI_URL: https://manage-soc-cases-dev.hmpps.service.justice.gov.uk/
+    CHECKRULE39MAIL_UI_URL: https://check-rule39-mail-dev.prison.service.justice.gov.uk/
 
   allowlist: null
 

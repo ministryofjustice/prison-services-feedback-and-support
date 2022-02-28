@@ -11,6 +11,7 @@ generic-service:
     ALLOCATION_MANAGER_ENDPOINT_URL: https://moic.service.justice.gov.uk/
     PATHFINDER_UI_URL: https://pathfinder.service.justice.gov.uk/
     SOC_UI_URL: https://manage-soc-cases.hmpps.service.justice.gov.uk/
+    CHECKRULE39MAIL_UI_URL: https://check-rule39-mail.prison.service.justice.gov.uk/
 
 generic-prometheus-alerts:
   alertSeverity: digital-prison-service
