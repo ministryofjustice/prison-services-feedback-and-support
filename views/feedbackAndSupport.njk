@@ -22,6 +22,7 @@
 
   <h2 class="govuk-heading-m">All other problems</h2>
   <form method="POST">
+    {# Please add any new services in the correct order to maintain and alphabetical list for easy readability #}
     {{ govukRadios({
       idPrefix: "service",
       name: "service",
@@ -32,10 +33,6 @@
         }
       },
       items: [
-        {
-          value: "prison-offender-manager",
-          text: "View POM cases"
-        },
         {
           value: "book-secure-move",
           text: "Book a secure move"
@@ -49,6 +46,10 @@
           text: "Check my diary"
         },
         {
+          value: "check-rule39-mail",
+          text: "Check Rule 39 mail"
+        },
+        {
           value: "categorisation-tool",
           text: "Digital Categorisation Service"
         },
@@ -57,36 +58,36 @@
           text: "Digital Prison Services (DPS)"
         },
         {
-          value: "digital-prison-services",
-          text: "NOMIS"
-        },
-        {
           value: "hdc-licences",
           text: "Home Detention Curfew and licences"
-        },
-        {
-          value: "pathfinder",
-          text: "Pathfinder service"
         },
         {
           value: "soc",
           text: "Manage SOC Cases"
         },
         {
-          value: "safety-diagnostic-tool",
-          text: "Safety Diagnostic Tool"
+          value: "digital-prison-services",
+          text: "NOMIS"
+        },
+        {
+          value: "pathfinder",
+          text: "Pathfinder service"
         },
         {
           value: "prepare-a-case",
           text: "Prepare a case for sentence"
         },
         {
-          value: "workload-measurement-tool",
-          text: "Workload measurement tool"
+          value: "safety-diagnostic-tool",
+          text: "Safety Diagnostic Tool"
         },
         {
-          value: "check-rule39-mail",
-          text: "Check Rule 39 mail"
+          value: "prison-offender-manager",
+          text: "View POM cases"
+        },
+        {
+          value: "workload-measurement-tool",
+          text: "Workload measurement tool"
         }
       ]
     }) }}
