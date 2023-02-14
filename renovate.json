@@ -24,6 +24,11 @@
       "matchPackageNames": ["@types/node"],
       "matchUpdateTypes": ["major"],
       "enabled": false
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["eslint"],
+      "allowedVersions": "7.32.0"
     }
   ],
   "vulnerabilityAlerts": {
