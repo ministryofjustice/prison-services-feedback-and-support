@@ -15,7 +15,7 @@
     "compile-sass-watch": "npm run compile-sass && sass --load-path=. ./sass:./build/static/stylesheets --watch --style compressed"
   },
   "engines": {
-    "node": ">=14.*",
+    "node": ">=v14.21.3",
     "npm": ">=7"
   },
   "dependencies": {
@@ -39,10 +39,10 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "jest": "^29.4.2",
+    "jest": "^29.4.3",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.4",
-    "sass": "^1.58.1"
+    "sass": "^1.58.3"
   },
   "lint-staged": {
     "*.{js,json,css}": [
