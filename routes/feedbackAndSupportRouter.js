@@ -17,6 +17,8 @@ router.get('/prison-offender-manager', (req, res) =>
   res.render('services/prisonOffenderManager', { allocationManagerUrl: config.urls.allocationManager, backLinkUrl })
 )
 
+router.get('/calculate-release-dates', (req, res) => res.render('services/calculateReleaseDates', { backLinkUrl }))
+
 router.get('/check-my-diary', (req, res) => res.render('services/checkMyDiary', { backLinkUrl }))
 
 router.get('/categorisation-tool', (req, res) => res.render('services/categorisationTool', { backLinkUrl }))
