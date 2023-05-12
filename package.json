@@ -16,7 +16,7 @@
   },
   "engines": {
     "node": ">=v14.21.3",
-    "npm": ">=7"
+    "npm": ">=8.19.4"
   },
   "dependencies": {
     "@ministryofjustice/frontend": "^1.6.4",
