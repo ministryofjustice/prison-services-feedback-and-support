@@ -5,6 +5,7 @@ generic-prometheus-alerts:
 
 generic-service:
   replicaCount: 2
+  productId: DPS025
 
   nameOverride: prison-services-feedback-and-support
 
