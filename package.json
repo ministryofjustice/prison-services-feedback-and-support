@@ -15,8 +15,8 @@
     "compile-sass-watch": "npm run compile-sass && sass --load-path=. ./sass:./build/static/stylesheets --watch --style compressed"
   },
   "engines": {
-    "node": ">=v14.21.3",
-    "npm": ">=7"
+    "node": "^v18.16.0",
+    "npm": "^9"
   },
   "dependencies": {
     "@ministryofjustice/frontend": "^1.8.0",
