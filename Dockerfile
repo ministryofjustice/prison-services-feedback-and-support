@@ -1,4 +1,4 @@
-FROM node:18.16-bullseye-slim
+FROM node:20.8-bullseye-slim
 LABEL maintainer="HMPPS Digital Studio <info@digital.justice.gov.uk>"
 
 ARG BUILD_NUMBER
