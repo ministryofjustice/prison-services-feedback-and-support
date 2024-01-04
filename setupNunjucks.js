@@ -3,7 +3,12 @@ const config = require('./config')
 
 module.exports = (app) => {
   const njkEnv = nunjucks.configure(
-    ['node_modules/govuk-frontend/', 'node_modules/@ministryofjustice/frontend/', 'views'],
+    [
+      'node_modules/govuk-frontend/dist/',
+      'node_modules/govuk-frontend/dist/govuk/components/',
+      'node_modules/@ministryofjustice/frontend/',
+      'views',
+    ],
     {
       autoescape: true,
       express: app,
