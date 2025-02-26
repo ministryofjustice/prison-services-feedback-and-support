@@ -19,7 +19,7 @@
     "npm": "^10.9.0"
   },
   "dependencies": {
-    "@ministryofjustice/frontend": "^2.2.4",
+    "@ministryofjustice/frontend": "^3.7.0",
     "cookie-parser": "~1.4.7",
     "debug": "~4.3.7",
     "dotenv": "^16.4.5",
