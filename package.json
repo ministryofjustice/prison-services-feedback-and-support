@@ -10,7 +10,7 @@
     "record-build-info": "node ./bin/record-build-info",
     "lint": "node node_modules/eslint/bin/eslint.js ./",
     "test": "jest",
-    "prepare": "husky install",
+    "prepare": "husky",
     "compile-sass": "sass --load-path=node_modules/govuk-frontend --load-path=node_modules/@ministryofjustice/frontend --load-path=. ./sass:./build/static/stylesheets --style compressed",
     "compile-sass-watch": "npm run compile-sass && sass --load-path=. ./sass:./build/static/stylesheets --watch --style compressed"
   },
