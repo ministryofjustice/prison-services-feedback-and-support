@@ -42,7 +42,7 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
-    "sass": "^1.89.1"
+    "sass": "^1.89.2"
   },
   "lint-staged": {
     "*.{js,json,css}": [
