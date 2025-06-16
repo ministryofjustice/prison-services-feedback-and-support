@@ -29,7 +29,7 @@
     "mkdirp": "^3.0.1",
     "morgan": "~1.10.0",
     "nunjucks": "^3.2.4",
-    "brace-expansion": "^2.0.2"
+    "brace-expansion": "^4.0.1"
   },
   "devDependencies": {
     "audit-ci": "^7.1.0",
