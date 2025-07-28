@@ -8,5 +8,5 @@ dependencies:
     version: 1.13.0
     repository: https://ministryofjustice.github.io/hmpps-helm-charts
   - name: generic-service
-    version: 3.11.0
+    version: 3.11.1
     repository: https://ministryofjustice.github.io/hmpps-helm-charts
