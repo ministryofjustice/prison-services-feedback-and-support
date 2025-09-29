@@ -19,12 +19,12 @@
     "npm": "^11"
   },
   "dependencies": {
-    "@ministryofjustice/frontend": "^5.1.5",
+    "@ministryofjustice/frontend": "^5.2.1",
     "cookie-parser": "~1.4.7",
-    "debug": "~4.4.1",
-    "dotenv": "^17.2.1",
+    "debug": "~4.4.3",
+    "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "govuk-frontend": "^5.11.2",
+    "govuk-frontend": "^5.12.0",
     "http-errors": "^2.0.0",
     "mkdirp": "^3.0.1",
     "morgan": "~1.10.1",
@@ -33,17 +33,17 @@
   },
   "devDependencies": {
     "audit-ci": "^7.1.0",
-    "@babel/eslint-parser": "^7.28.0",
+    "@babel/eslint-parser": "^7.28.4",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
     "husky": "^9.1.7",
-    "jest": "^30.1.2",
+    "jest": "^30.1.3",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
-    "sass": "^1.91.0"
+    "sass": "^1.93.2"
   },
   "lint-staged": {
     "*.{js,json,css}": [
